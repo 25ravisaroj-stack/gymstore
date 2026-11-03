@@ -1,0 +1,186 @@
+<div class="reels-container">
+
+  @for(
+  video of videos;
+  track video.id;
+  let i = $index
+  ) {
+
+  <div class="reel-item">
+
+    <!-- Video -->
+
+    <video #player class="reel-video" [src]="video.videoUrl" muted loop playsinline preload="metadata">
+    </video>
+
+    <!-- Volume Controls -->
+
+    <div class="video-actions">
+
+      <button class="action-btn" (click)="togglePlay(player)">
+
+        {{ player.paused ? '▶' : '⏸' }}
+
+      </button>
+
+      <button class="action-btn" (click)="toggleMute(player, i)">
+
+        {{ mutedStates[i] ? '🔇' : '🔊' }}
+
+      </button>
+
+      <button class="action-btn" (click)="decreaseVolume(player, i)">
+
+        -
+
+      </button>
+
+      <input class="volume-slider" type="range" min="0" max="1" step="0.1" [value]="player.volume"
+        (input)="onVolumeChange(player, i, $event)">
+
+      <button class="action-btn" (click)="increaseVolume(player, i)">
+
+        +
+
+      </button>
+
+    </div>
+
+    <!-- Social Actions -->
+
+    <div class="social-actions">
+
+      <!-- Like -->
+
+      <button class="social-btn" (click)="likeVideo(video.id)">
+
+        ❤️
+
+        <span>
+          {{
+          getReaction(video.id)
+          ?.likeCount || 0
+          }}
+        </span>
+
+      </button>
+
+      <!-- Dislike -->
+
+      <button class="social-btn" (click)="dislikeVideo(video.id)">
+
+        👎
+
+        <span>
+          {{
+          getReaction(video.id)
+          ?.dislikeCount || 0
+          }}
+        </span>
+
+      </button>
+
+      <!-- Comment -->
+
+      <button class="social-btn" (click)="loadComments(video.id)">
+
+        💬
+
+        <span>
+          {{
+          commentCountMap[video.id] || 0
+          // commentsMap[video.id]?.length || 0
+          }}
+        </span>
+
+      </button>
+
+    </div>
+
+    <!-- Comment Panel -->
+
+    @if(showComments[video.id]) {
+
+    <div class="comment-panel">
+
+      <div class="comment-header">
+
+        <span>Comments</span>
+
+        <button class="close-comment-btn" (click)="closeComments(video.id)">
+          ✖
+        </button>
+
+      </div>
+      <div class="comment-list">
+
+        @for(
+        comment of (commentsMap[video.id] || []);
+        track $index
+        ) {
+
+        <div class="comment-item">
+
+          <div class="comment-avatar">
+            {{ comment.userName?.charAt(0) || 'U' }}
+          </div>
+
+          <div class="comment-content">
+
+            <div class="comment-user">
+              {{ comment.userName || 'User' }}
+            </div>
+
+            <div class="comment-message">
+              {{ comment.message }}
+            </div>
+
+            <div class="comment-time">
+              {{ comment.createdOn | date:'dd MMM yyyy, h:mm a' }}
+            </div>
+
+          </div>
+
+        </div>
+
+        } @empty {
+
+        <div class="no-comments">
+          No comments yet
+        </div>
+
+        }
+
+      </div>
+
+      <div class="comment-footer">
+
+        <input type="text" placeholder="Write comment..." [(ngModel)]="commentText[video.id]">
+
+        <button class="post-btn" (click)="addComment(video.id)">
+
+          Post
+
+        </button>
+
+      </div>
+
+    </div>
+
+    }
+
+  </div>
+
+  }
+
+  @if(isLoading) {
+
+  <div class="loading">
+
+    Loading Next Reel...
+
+  </div>
+
+  }
+
+</div>

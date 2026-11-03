@@ -1,0 +1,83 @@
+<div class="reels-section">
+
+  <h2>Fitness Reels</h2>
+
+  <div class="reels-grid">
+
+    @for(video of videos; track video.id; let i = $index){
+
+      <div class="reel-card">
+
+        <video
+          #player
+          class="reel-video"
+          [src]="video.videoUrl"
+          autoplay
+          muted
+          loop
+          playsinline
+          (timeupdate)="updateProgress(player, i)">
+        </video>
+
+        <div class="video-actions">
+
+          <button
+            class="action-btn"
+            (click)="togglePlay(player)">
+            {{ player.paused ? '▶' : '⏸' }}
+          </button>
+
+          <button
+            class="action-btn"
+            (click)="toggleMute(player, i)">
+            {{ mutedStates[i] ? '🔇' : '🔊' }}
+          </button>
+
+          <button
+            class="action-btn"
+            (click)="decreaseVolume(player, i)">
+            -
+          </button>
+
+          <input
+            class="volume-slider"
+            type="range"
+            min="0"
+            max="1"
+            step="0.1"
+            [value]="player.volume"
+            (input)="onVolumeChange(player, i, $event)">
+
+          <button
+            class="action-btn"
+            (click)="increaseVolume(player, i)">
+            +
+          </button>
+
+          <button
+            class="action-btn"
+            (click)="toggleFullscreen(player)">
+            ⛶
+          </button>
+
+        </div>
+
+        <!-- <div class="progress-wrapper">
+
+          <input
+            class="progress-bar"
+            type="range"
+            min="0"
+            max="100"
+            [value]="progressValues[i] || 0"
+            (input)="seekVideo(player, $event)">
+
+        </div> -->
+
+      </div>
+
+    }
+
+  </div>
+
+</div>

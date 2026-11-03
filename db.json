@@ -1,0 +1,382 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Whey Protein",
+      "description": "High-quality whey protein for muscle recovery and growth.",
+      "category": "Protein",
+      "price": 2499,
+      "image": "https://picsum.photos/400/300?random=1",
+      "stock": 0
+    },
+    {
+      "id": "2",
+      "name": "Mass Gainer",
+      "description": "Calorie-rich formula for healthy weight gain.",
+      "category": "Gainer",
+      "price": 1999,
+      "image": "https://picsum.photos/400/300?random=2",
+      "stock": 2
+    },
+    {
+      "id": "3",
+      "name": "Creatine Monohydrate",
+      "description": "Boost strength and workout performance.",
+      "category": "Creatine",
+      "price": 899,
+      "image": "https://picsum.photos/400/300?random=3",
+      "stock": 15
+    },
+    {
+      "id": "4",
+      "name": "BCAA Energy",
+      "description": "Essential amino acids for muscle recovery.",
+      "category": "BCAA",
+      "price": 1299,
+      "image": "https://picsum.photos/400/300?random=4",
+      "stock": 8
+    },
+    {
+      "id": "5",
+      "name": "Pre Workout X",
+      "description": "Explosive energy and focus before workouts.",
+      "category": "Pre Workout",
+      "price": 1499,
+      "image": "https://picsum.photos/400/300?random=5",
+      "stock": 12
+    },
+    {
+      "id": "6",
+      "name": "Casein Protein",
+      "description": "Slow-release protein for overnight recovery.",
+      "category": "Protein",
+      "price": 2899,
+      "image": "https://picsum.photos/400/300?random=6",
+      "stock": 4
+    },
+    {
+      "id": "7",
+      "name": "Fish Oil",
+      "description": "Omega-3 supplement for heart health.",
+      "category": "Health",
+      "price": 699,
+      "image": "https://picsum.photos/400/300?random=7",
+      "stock": 20
+    },
+    {
+      "id": "8",
+      "name": "Multivitamin",
+      "description": "Daily vitamins and minerals support.",
+      "category": "Health",
+      "price": 599,
+      "image": "https://picsum.photos/400/300?random=8",
+      "stock": 25
+    },
+    {
+      "id": "9",
+      "name": "Glutamine",
+      "description": "Supports recovery and immune function.",
+      "category": "Recovery",
+      "price": 999,
+      "image": "https://picsum.photos/400/300?random=9",
+      "stock": 10
+    },
+    {
+      "id": "10",
+      "name": "L-Carnitine",
+      "description": "Supports fat metabolism and energy.",
+      "category": "Fat Burner",
+      "price": 1199,
+      "image": "https://picsum.photos/400/300?random=10",
+      "stock": 6
+    },
+    {
+      "id": "11",
+      "name": "Protein Bar",
+      "description": "Convenient high-protein snack.",
+      "category": "Snack",
+      "price": 99,
+      "image": "https://picsum.photos/400/300?random=11",
+      "stock": 50
+    },
+    {
+      "id": "12",
+      "name": "Peanut Butter",
+      "description": "Healthy fats and protein source.",
+      "category": "Nutrition",
+      "price": 349,
+      "image": "https://picsum.photos/400/300?random=12",
+      "stock": 18
+    },
+    {
+      "id": "13",
+      "name": "Isolate Protein",
+      "description": "Ultra-filtered protein with low carbs.",
+      "category": "Protein",
+      "price": 3299,
+      "image": "https://picsum.photos/400/300?random=13",
+      "stock": 7
+    },
+    {
+      "id": "14",
+      "name": "ZMA",
+      "description": "Supports sleep and recovery.",
+      "category": "Recovery",
+      "price": 799,
+      "image": "https://picsum.photos/400/300?random=14",
+      "stock": 14
+    },
+    {
+      "id": "15",
+      "name": "Electrolyte Drink",
+      "description": "Hydration support during workouts.",
+      "category": "Hydration",
+      "price": 499,
+      "image": "https://picsum.photos/400/300?random=15",
+      "stock": 30
+    },
+    {
+      "id": "16",
+      "name": "Vegan Protein",
+      "description": "Plant-based protein blend.",
+      "category": "Protein",
+      "price": 2599,
+      "image": "https://picsum.photos/400/300?random=16",
+      "stock": 9
+    },
+    {
+      "id": "17",
+      "name": "Shaker Bottle",
+      "description": "Leak-proof shaker for supplements.",
+      "category": "Accessories",
+      "price": 299,
+      "image": "https://picsum.photos/400/300?random=17",
+      "stock": 35
+    },
+    {
+      "id": "18",
+      "name": "Gym Gloves",
+      "description": "Comfortable grip and wrist support.",
+      "category": "Accessories",
+      "price": 499,
+      "image": "https://picsum.photos/400/300?random=18",
+      "stock": 12
+    },
+    {
+      "id": "19",
+      "name": "Fat Burner Pro",
+      "description": "Supports weight management goals.",
+      "category": "Fat Burner",
+      "price": 1599,
+      "image": "https://picsum.photos/400/300?random=19",
+      "stock": 3
+    },
+    {
+      "id": "20",
+      "name": "Workout Bag",
+      "description": "Spacious gym bag for daily use.",
+      "category": "Accessories",
+      "price": 899,
+      "image": "https://picsum.photos/400/300?random=20",
+      "stock": 11
+    }
+  ],
+  "users": [
+    {
+      "name": "james",
+      "email": "james@gmail.com",
+      "password": 12345,
+      "id": "pcWrwA8bQZs"
+    }
+  ],
+  "videos": [
+    {
+      "id": "1",
+      "title": "Full Body Workout",
+      "description": "Complete beginner full body workout",
+      "category": "Workout",
+      "videoUrl": "https://www.w3schools.com/html/mov_bbb.mp4",
+      "thumbnail": "https://picsum.photos/id/1011/400/700"
+    },
+    {
+      "id": "2",
+      "title": "Chest Workout",
+      "description": "Build a stronger chest with compound exercises",
+      "category": "Workout",
+      "videoUrl": "https://samplelib.com/lib/preview/mp4/sample-5s.mp4",
+      "thumbnail": "https://picsum.photos/id/1015/400/700"
+    },
+    {
+      "id": "3",
+      "title": "Back Workout",
+      "description": "Improve width and thickness of your back",
+      "category": "Workout",
+      "videoUrl": "https://samplelib.com/lib/preview/mp4/sample-10s.mp4",
+      "thumbnail": "https://picsum.photos/id/1025/400/700"
+    },
+    {
+      "id": "4",
+      "title": "Shoulder Workout",
+      "description": "Build bigger and rounded shoulders",
+      "category": "Workout",
+      "videoUrl": "https://samplelib.com/lib/preview/mp4/sample-15s.mp4",
+      "thumbnail": "https://picsum.photos/id/1035/400/700"
+    },
+    {
+      "id": "5",
+      "title": "Leg Day",
+      "description": "Complete lower body strength training",
+      "category": "Workout",
+      "videoUrl": "https://samplelib.com/lib/preview/mp4/sample-20s.mp4",
+      "thumbnail": "https://picsum.photos/id/1040/400/700"
+    },
+    {
+      "id": "6",
+      "title": "Biceps Blast",
+      "description": "Grow bigger biceps and forearms",
+      "category": "Workout",
+      "videoUrl": "https://samplelib.com/lib/preview/mp4/sample-30s.mp4",
+      "thumbnail": "https://picsum.photos/id/1044/400/700"
+    },
+    {
+      "id": "7",
+      "title": "Push Pull Legs",
+      "description": "Popular gym split explained",
+      "category": "Workout",
+      "videoUrl": "https://www.w3schools.com/html/movie.mp4",
+      "thumbnail": "https://picsum.photos/id/1070/400/700"
+    },
+    {
+      "id": "8",
+      "title": "Chest Workout Blast",
+      "description": "Build a bigger and stronger chest with bench press and fly movements.",
+      "category": "Bodybuilding",
+      "videoUrl": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+      "thumbnail": "https://picsum.photos/400/700?random=1"
+    }
+  ],
+  "videoReactions": [
+    {
+      "videoId": 1,
+      "likeCount": 11,
+      "dislikeCount": 10,
+      "id": "gRD6mmF5UXY"
+    },
+    {
+      "videoId": 2,
+      "likeCount": 3,
+      "dislikeCount": 3,
+      "id": "_f_Hke3jizI"
+    },
+    {
+      "videoId": 4,
+      "likeCount": 1,
+      "dislikeCount": 1,
+      "id": "O0syLlovSdc"
+    }
+  ],
+  "comments": [
+    {
+      "videoId": 1,
+      "message": "klj;kljkjasdfk",
+      "createdOn": "2026-10-23T16:00:03.533Z",
+      "id": "3bONfgYQH-A"
+    },
+    {
+      "videoId": 1,
+      "message": "asfkjljajsldfkjsda",
+      "createdOn": "2026-10-23T16:24:55.038Z",
+      "id": "DCwt9ichqzQ"
+    },
+    {
+      "videoId": 1,
+      "message": "hkjhj",
+      "createdOn": "2026-10-23T16:25:32.991Z",
+      "id": "UePWbqYU3Ko"
+    },
+    {
+      "videoId": 1,
+      "message": "asfasfd",
+      "createdOn": "2026-10-23T16:26:40.357Z",
+      "id": "6fP-SOy0sI8"
+    },
+    {
+      "videoId": 1,
+      "message": "ravi",
+      "createdOn": "2026-10-23T16:33:27.462Z",
+      "id": "iX0UWjx6ytc"
+    },
+    {
+      "videoId": 1,
+      "message": "vijay",
+      "createdOn": "2026-10-23T16:34:18.020Z",
+      "id": "L_PalMdojW8"
+    },
+    {
+      "videoId": 1,
+      "message": "ajay",
+      "createdOn": "2026-10-23T16:34:31.231Z",
+      "id": "TP23IOSDUXc"
+    },
+    {
+      "videoId": 1,
+      "userName": "Ravi",
+      "message": "saroj",
+      "createdOn": "2026-10-23T16:44:29.756Z",
+      "id": "BvTiZjZY8mU"
+    },
+    {
+      "videoId": 2,
+      "userName": "Ravi",
+      "message": "hi",
+      "createdOn": "2026-10-23T16:45:05.151Z",
+      "id": "jwSWR6Gp0_w"
+    },
+    {
+      "videoId": 3,
+      "userName": "Ravi",
+      "message": "hello",
+      "createdOn": "2026-10-23T16:48:04.666Z",
+      "id": "Vhy-oZbALkk"
+    },
+    {
+      "videoId": 4,
+      "userName": "Ravi",
+      "message": "helllo",
+      "createdOn": "2026-10-23T16:48:53.391Z",
+      "id": "DMpka4a5EBw"
+    },
+    {
+      "videoId": 4,
+      "userName": "Ravi",
+      "message": "jnew",
+      "createdOn": "2026-10-23T16:49:41.783Z",
+      "id": "lb4gL4wD8SI"
+    },
+    {
+      "videoId": 5,
+      "userName": "Ravi",
+      "message": "hi",
+      "createdOn": "2026-10-23T16:52:56.891Z",
+      "id": "uHftyHqjV00"
+    },
+    {
+      "videoId": 2,
+      "userName": "Ravi",
+      "message": "neew",
+      "createdOn": "2026-10-23T16:56:09.460Z",
+      "id": "Mep0cogikZ4"
+    },
+    {
+      "videoId": 4,
+      "userName": "Ravi",
+      "message": "jjklhlkhk",
+      "createdOn": "2026-10-23T17:03:35.438Z",
+      "id": "tc-pussDF8I"
+    }
+  ],
+  "trainers": [],
+  "orders": [],
+  "cart": [],
+  "$schema": "./node_modules/json-server/schema.json"
+}
