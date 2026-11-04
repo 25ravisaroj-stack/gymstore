@@ -1,15 +1,15 @@
 import { Component, inject, signal, computed } from '@angular/core';
 
-import { Cart as cartModel } from '../../../core/models/cart';
-import { Cart as cartService } from '../../../core/services/cart';
-import { QuantityStore } from '../../../core/services/quantity-store';
-import { ProductService } from '../../../core/services/product';
-import { ToastService } from '../../../core/services/toast-service';
+import { Cart as cartModel } from '../../core/models/cart';
+import { Cart as cartService } from '../../core/services/cart';
+import { QuantityStore } from '../../core/services/quantity-store';
+import { ProductService } from '../../core/services/product';
+import { ToastService } from '../../core/services/toast-service';
 
 @Component({
-    selector: 'app-cart',
+    selector: 'app-cartnew',
     standalone: true,
-    templateUrl: './cart.html'
+    templateUrl: './cartnew.html'
 })
 export class CartComponent {
 
@@ -22,8 +22,8 @@ export class CartComponent {
     }
 
     loadCart() {
-        this.store.getCartWithProducts().subscribe({
-            next: (res) => {
+        this.store.getCartWithProductswithCache().subscribe({
+            next: (res:any) => {
                 console.log('Cart Response', res);
 
                 this.cart.set(res as cartModel[]);
@@ -35,7 +35,7 @@ export class CartComponent {
                     );
                 });
             },
-            error: err => {
+            error: (err:any) => {
                 console.log(err);
             }
         })

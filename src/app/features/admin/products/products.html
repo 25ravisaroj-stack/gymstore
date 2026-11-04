@@ -1,1 +1,33 @@
-<p>products works!</p>
+<div class="container mt-4">
+
+  <div class="row">
+
+    @for(product of products; track product.id){
+
+      <div class="col-lg-3 col-md-4 mb-4">
+
+        <div class="card product-card">
+
+          <img
+            [src]="product.image"
+            class="card-img-top">
+
+          <div class="card-body">
+
+            <h5>{{ product.name }}</h5>
+
+            <p>₹{{ product.price }}</p>
+
+            <p>Stock: {{ product.stock }}</p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    }
+
+  </div>
+
+</div>

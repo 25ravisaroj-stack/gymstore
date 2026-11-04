@@ -44,20 +44,6 @@ export class ProductListComponent
   showSuccess = signal(false);
   ngOnInit() {
     this.loadProducts();
-    // this.service.getProducts().subscribe(data => {
-
-    //   // this.store.setProducts(data);
-    //   this.allProducts =data;
-    //    this.store.setProducts(
-    //     this.allProducts.slice(0, this.pageSize)
-    //    );
-    //   data.forEach(product => {
-
-    //     this.quantities[product.id] = 1;
-
-    //   });
-
-    // });
 
   }
   loadProducts() {

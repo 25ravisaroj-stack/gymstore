@@ -1,35 +1,34 @@
 import { Routes } from '@angular/router';
 
 import { LoginComponent }
-from './features/auth/login/login';
+  from './features/auth/login/login';
 
 import { RegisterComponent }
-from './features/auth/register/register';
+  from './features/auth/register/register';
 import { HomeComponent } from './features/home/home/home';
 
 import { authGuard }
-from './core/guards/auth-guard';
+  from './core/guards/auth-guard';
 
 export const routes: Routes = [
 
   {
-    path:'login',
+    path: 'login',
     component: LoginComponent
   },
 
   {
-    path:'register',
+    path: 'register',
     component: RegisterComponent
   },
- 
+
 
   {
-    path:'',
-    canActivate:[authGuard],
-    loadComponent:() =>
-    import('./layouts/main-layout/main-layout')
-    .then(m=>m.MainLayout),
-     children: [
+    path: '',
+    loadComponent: () =>
+      import('./layouts/main-layout/main-layout')
+        .then(m => m.MainLayout),
+    children: [
 
       {
         path: '',
@@ -50,6 +49,12 @@ export const routes: Routes = [
           import('./features/products/product-list/product-list')
             .then(m => m.ProductListComponent)
       },
+      {
+        path: 'productslist',
+        loadComponent: () =>
+          import('./features/products/product-lists/product-lists')
+            .then(m => m.ProductListsComponent)
+      },
 
       {
         path: 'videos',
@@ -60,7 +65,14 @@ export const routes: Routes = [
       {
         path: 'cart',
         loadComponent: () =>
-          import('./features/cart/cart/cart')
+          import('./features/cart/cart')
+            .then(m => m.CartComponent)
+      }
+      ,
+      {
+        path: 'cartnew',
+        loadComponent: () =>
+          import('./features/cartnew/cartnew')
             .then(m => m.CartComponent)
       }
       ,
@@ -72,7 +84,19 @@ export const routes: Routes = [
       }
 
     ]
-    
+
+  },
+  {
+    path: 'adminproduct',
+    canActivate: [authGuard],
+    loadComponent: () =>
+      import('./layouts/admin-layout/admin-layout')
+        .then(m => m.AdminLayout),
+    children: [
+      {
+        path: 'product', loadChildren: () => import('./features/admin/products/products').then(m => m.Products)
+      }
+    ]
   }
 
 ];

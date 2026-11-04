@@ -14,5 +14,4 @@ export class NavbarComponent {
 
 constructor(private cartService:Cart){}
 
-
 }

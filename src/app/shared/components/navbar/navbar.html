@@ -20,23 +20,38 @@
         </a>
       </li>
       <li class="nav-item">
+        <a routerLink="/productslist" class="nav-link">
+          Productswithcache
+        </a>
+      </li>
+      <li class="nav-item">
         <a routerLink="/videos" class="nav-link">
           Videos
         </a>
       </li>
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <a routerLink="/cart" class="nav-link">
-           <div class="cart-icon">
+          <div class="cart-icon">
             🛒
             <span class="badge">
               {{ cartService.totalItems() }}
             </span>
           </div>
         </a>
+      </li> -->
+      <li class="nav-item">
+        <a routerLink="/cartnew" class="nav-link">
+          <div class="cart-icon">
+            🛒
+            <span class="badge">
+              {{ cartService.cartCount() }}
+            </span>
+          </div>
+        </a>
       </li>
       <li class="nav-item">
         <a routerLink="#" class="nav-link">
-           <div class="cart-icon">
+          <div class="cart-icon">
             log-in
           </div>
         </a>

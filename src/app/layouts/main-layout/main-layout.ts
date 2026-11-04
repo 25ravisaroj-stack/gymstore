@@ -23,7 +23,7 @@ showFooter = true;
       .pipe(filter(event => event instanceof NavigationEnd))
       .subscribe(() => {
 
-        const hideFooterRoutes = ['/videos','/cart','/product-details'];
+        const hideFooterRoutes = ['/videos','/cart','/product-details','/productslist'];
 
         this.showFooter = !hideFooterRoutes.some(route =>
           this.router.url.startsWith(route)
